@@ -1,0 +1,85 @@
+<!-- register-login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Register and Login</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Register and Login</h1>
+        <div id="registerForm" style="display: block;">
+            <form>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="button" onclick="registerUser()">Register</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="toggleForms()">Login here</a>.</p>
+        </div>
+
+        <div id="loginForm" style="display: none;">
+            <form>
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" name="loginEmail" required>
+
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+
+                <button type="button" onclick="loginUser()">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" onclick="toggleForms()">Register here</a>.</p>
+        </div>
+    </div>
+    <!-- Add this section to register-login.html -->
+<!-- ... (previous code) -->
+<div id="loginSection" style="display: none;">
+    <h2>Login</h2>
+    <form>
+        <label for="loginEmail">Email:</label>
+        <input type="email" id="loginEmail" name="loginEmail" required>
+
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" name="loginPassword" required>
+
+        <button type="button" onclick="login()">Login</button>
+    </form>
+</div>
+<!-- ... (remaining code) -->
+
+    <!-- Add this section to register-login.html -->
+<!-- ... (previous code) -->
+<div id="searchBusLocation" style="display: none;">
+    <h2>Search Bus Location</h2>
+    <form>
+        <label for="sourceLocation">Source Location:</label>
+        <input type="text" id="sourceLocation" name="sourceLocation" required>
+
+        <label for="destinationLocation">Destination Location:</label>
+        <input type="text" id="destinationLocation" name="destinationLocation" required>
+
+        <button type="button" onclick="searchBus()">Search Bus</button>
+    </form>
+    <div id="busLocationResult"></div>
+</div>
+<!-- ... (remaining code) -->
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-analytics.js"></script>
+    <script src="user.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!-- driver-login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Driver/Travel Login</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Driver/Travel Login</h1>
+        <form id="driverLoginForm">
+            <label for="driverUsername">Username:</label>
+            <input type="text" id="driverUsername" name="driverUsername" required>
+
+            <label for="driverPassword">Password:</label>
+            <input type="password" id="driverPassword" name="driverPassword" required>
+
+            <button type="button" onclick="driverLogin()">Login</button>
+        </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-functions.js"></script>
+    <script src="driver.js"></script>
+</body>
+</html>
